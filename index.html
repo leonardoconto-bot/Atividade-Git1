@@ -8,24 +8,54 @@
 </head>
 <body>
 
-    <div class="caixa-login">
+    <div class="caixa-login" id="caixaLogin">
         <h2>Bem-vindo de volta</h2>
         <p class="subtitulo">Faça login para ler sobre o Umbreon!</p>
 
         <form id="formLogin">
             <div class="campo">
-                <label for="usuario">Nome de Usuário:</label>
-                <input type="text" id="usuario" placeholder="Ex: Ash Ketchum" required>
+                <label for="usuarioLogin">Nome de Usuário:</label>
+                <input type="text" id="usuarioLogin" placeholder="Ex: Ash Ketchum" required>
             </div>
 
             <div class="campo">
-                <label for="senha">Senha de Acesso:</label>
-                <input type="password" id="senha" required>
+                <label for="senhaLogin">Senha de Acesso:</label>
+                <input type="password" id="senhaLogin" required>
             </div>
-
+            
+            <!-- Onde a mensagem de erro vai aparecer -->
+            <p id="mensagemLogin" class="mensagem"></p>
             <button type="submit" id="btnEntrar">Entrar na Pokédex</button>
         </form>
+        <div class="rodape-caixa">
+            <p>Ainda não tem acesso? <a href="#" id="linkIrCadastro">Cadastre-se aqui</a></p>
+        </div>
     </div>
+
+    <!-- CAIXA DE CADASTRO -->
+<div class="caixa-login" id="caixaCadastro" style="display: none;">
+    <h2>Novo Treinador</h2>
+    <p class="subtitulo">Crie seu acesso para a Pokédex</p>
+
+    <form id="formCadastro">
+        <div class="campo">
+            <label for="usuarioCadastro">Crie um Usuário:</label>
+            <input type="text" id="usuarioCadastro" placeholder="Seu nome" required>
+        </div>
+
+        <div class="campo">
+            <label for="senhaCadastro">Crie uma Senha:</label>
+            <input type="password" id="senhaCadastro" required>
+        </div>
+
+        <p id="mensagemCadastro" class="mensagem"></p>
+        <button type="submit" id="btnCadastrar">Criar Conta</button>
+    </form>
+
+    <div class="rodape-caixa">
+        <p>Já tem uma conta? <a href="#" id="linkIrLogin">Faça o Login</a></p>
+    </div>
+</div>
 
     <script src="/JS/script.js"></script> <!--conecta no script-->
 </body>
